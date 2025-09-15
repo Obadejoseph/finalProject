@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use('/api/v1',userRouter)
 
-// app.use('cors')
+// app.use(cors())
 
 app.use((error,req,res,next)=>{
     if (error) {

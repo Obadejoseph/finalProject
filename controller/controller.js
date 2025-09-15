@@ -57,4 +57,19 @@ exports.getaAll = async (req,res) => {
     
 }
 
-//
+exports.getOne =async (req,res) => {
+    try {
+        const{id}= req.params
+
+        const data = await userModel.findById(id)
+        res.status(200).json({
+            message:`get one is successfull`,
+            data:data
+        })
+    } catch (error) {
+        res.status(500).json({
+            message:`internal server error`,
+            error:error.message
+       })
+    }
+}
