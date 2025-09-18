@@ -30,8 +30,8 @@ const userSchema = mongoose.Schema({
         unique:true
     },
     profilePicture:{
-        imageUrl:{type:String, required:false},
-        publicId:{type:String, required:false}
+        imageUrl:{type:String, required:true},
+        publicId:{type:String, required:true}
     }
     
 

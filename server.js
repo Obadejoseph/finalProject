@@ -5,10 +5,12 @@ const mongoose = require('mongoose')
 const PORT = process.env.PORT || 8080
 const db = process.env.db
 const userRouter = require('./router/userRouter')
+const productRouter = require('./router/productrRouter')
 
 const app = express();
 app.use(express.json());
 app.use('/api/v1',userRouter)
+app.use('/api/v1',productRouter)
 
 // app.use(cors())
 

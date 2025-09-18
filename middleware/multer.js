@@ -15,7 +15,7 @@ const fileFilter = (req,file,cb)=>{
     if (file.mimetype.startsWith('image/')) {
         cb(null, true)
         
-    } else {
+    } else { 
        throw new Error("invalid file formart: images only") 
     }
 };
